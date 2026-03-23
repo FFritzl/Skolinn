@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tími 8</title>
+    <link rel="stylesheet" href="style.css" />
+    Q
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Javascript 101</h1>
+    <div class="card">
+      <h2>Stimplaðu inn nafnið þitt:</h2>
+      <input type="text" id="nameInput" placeholder="Nafnið þitt hér..." />
+      <button onclick="sayHello()">Birta halló + nafn!</button>
+      <div class="output" id="nameOutput"></div>
+    </div>
+    <div class="card">
+      <h2>Stimplaðu inn aldurinn þinn:</h2>
+      <input type="number" id="ageInput" placeholder="Aldurinn þinn hér..." />
+      <button onclick="checkAge()">
+        Birta hvort aðili er fullorðinn eða barn
+      </button>
+      <div class="output" id="ageOutput"></div>
+    </div>
+
+    <div class="card">
+      <h2>Reiknivél</h2>
+      <input type="number" id="num1" placeholder="Tala 1..." />
+      <select name="val" id="val">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">*</option>
+        <option value="4">/</option>
+      </select>
+      <input type="number" id="num2" placeholder="Tala 2..." />
+      <button onclick="calculate()">Reikna</button>
+      <div class="output" id="calculatorOutput"></div>
+    </div>
+  </body>
+</html>

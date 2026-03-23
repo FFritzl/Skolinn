@@ -5,21 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skráning í driftkeppni</title>
     <link rel="stylesheet" href="assets/styles.css" />
-    <link rel="stylesheet" href="assets/navbar.css" />
-    <link rel="stylesheet" href="assets/keppni.css" />
   </head>
   <body>
     <!--Header-->
-    <header class="header">
-      <nav class="navbar">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="Index.html">Home</a></li>
-          <li class="nav-item"><a href="#">Skrá í keppni</a></li>
-          <li class="nav-item"><a href="Fréttir.html">Fréttir</a></li>
-          <li class="nav-item"><a href="Ummig.html">Um mig</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header class="header"></header>
 
     <!--Main-->
     <main class="main">
@@ -102,7 +91,43 @@
         <button type="reset">Eyða</button>
       </form>
     </main>
-    <script src="assets/keppni.js"></script>
+    <script type="text/javascript">
+      let loginform = document.getElementById("skraningarform");
+
+      loginform.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let nafn = document.getElementById("nafn");
+        let mail = document.getElementById("mail");
+        let aldur = document.getElementById("aldur");
+        let lið = document.getElementById("team");
+        let kyn = document.getElementById("kyn");
+        let upplysingar = document.getElementById("upplysingar");
+
+        const valdir = Array.from(
+          document.querySelectorAll('input[name="flokkur"]:checked'),
+          (cb) => cb.value,
+        );
+
+        if (
+          nafn.value == "" ||
+          mail.value == "" ||
+          aldur.value == "" ||
+          lið.value == "" ||
+          flokkur.value == "" ||
+          kyn.value == "" ||
+          upplysingar.value == ""
+        ) {
+          alert("Það þarf að fylla í alla reiti til að senda inn skráningur");
+        } else {
+          alert("Þú hefur skráð þig í keppni");
+          console.log(
+            `Keppandi: ${nafn.value}\nMail: ${mail.value}\nAldur: ${aldur.value}\nLið: ${lið.value}\nFlokkur: ${valdir.join(", ")}\nKyn: ${kyn.value}\nUpplýsingar: ${upplysingar.value}`,
+          );
+          document.getElementById("skraningarform").reset();
+        }
+      });
+    </script>
 
     <!--Footer-->
     <footer class="footer"></footer>
