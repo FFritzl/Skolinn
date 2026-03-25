@@ -10,12 +10,14 @@ While loopa athugar hvort einhvað sé true og um leið og það verður false �
 
 ## Af hverju verður þessi lykkja óendanleg?
 
+```
 let i = 0;
 
 while (i < 5) {
 console.log(i);
 i + 1;
 }
+```
 
 því að i + 1 bætir bara við 1 að hverju sinni semsagt verður alltaf bara 1 og
 kemst ekki upp í 5 til að stoppa loopuna
@@ -40,61 +42,71 @@ i = i + 1 breytir i í i + 1
 
 ### Lagaðu þennan kóða svo hann prenti tölurnar 0 til 4:
 
+```
 let i = 0;
 
 while (i <= 4) {
 console.log(i);
 i = i + 1;
 }
+```
 
 ## Verkefni B
 
 ### Lagaðu þennan kóða svo hann prenti tölurnar 1 til 5:
 
+```
 let i = 1;
 
 while (i <= 5) {
 console.log(i);
 i = i + 1
 }
-Hluti 3 – Skrifaðu eigin lykkjur
+```
+
+# Hluti 3 – Skrifaðu eigin lykkjur
 
 ## Verkefni C
 
-### Skrifaðu while-lykkju sem prentar:
+### Skrifaðu while-lykkju sem prentar: 0-4
 
-0-4
-
+```
 let i = 0;
 while (i < 5) {
 console.log(i);
 i++;
 }
+```
 
 ## Verkefni D
 
-### Skrifaðu for-lykkju sem prentar 0-4
+### Skrifaðu for-lykkju sem prentar: 0-4
 
+```
 for (let i = 0; i < 5; i++) {
 console.log(i);
 }
+```
 
 ## Verkefni E
 
 ### Skrifaðu for-lykkju sem prentar tölurnar 5 niður í 1.
 
+```
 for (let i = 5; i > 0; i -= 1) {
 console.log(i);
 }
+```
 
 # Hluti 4 – Hugsaðu aðeins
 
 ### Skoðaðu þennan kóða:
 
+```
 for (let i = 0; i < 5; i = i + 1) {
 console.log(i);
 }
-Svaraðu:
+```
 
 ### Hvar byrjar talningin?
 
@@ -118,12 +130,14 @@ bætir við 1
 
 ### Skrifaðu lykkju sem leggur saman tölurnar 1 til 5 og prentar summuna.
 
+```
 let sum = 0;
 
 for (let i = 1; i <= 5; i++) {
 sum += i;
 }
 console.log(sum);
+```
 
 Vænt niðurstaða:
 
